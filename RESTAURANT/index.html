@@ -1,0 +1,328 @@
+<!--
+    NAME: OMOLE-ADEBOMI STEVEN
+    PROJECT: RESTAURANT
+    DOB: 29th of July
+    
+-->
+<!DOCTYPE HTML>
+<HTML>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewpoint' content='width=width-width, initial-scale=1.0'>
+    <title>
+        Restaurant
+    </title>
+     <link rel="stylesheet" href="CSS/index.css">
+    </head>
+    <body>
+
+    
+        <div class='headcase'>
+        <h1 class='head'>CodeLagos Restaurant</h1>
+        <div class='menu-down'>
+            <button class='menu-btn'>Menu<i ></i></button>
+            <div class='menu-form'>
+            <a href='cart.php'><button class='menu-btn'>My Cart</button></a>
+            <button class='menu-btn'>My Order</button>
+            <a href='chats.php'><button class='menu-btn'>Chats</button></a>
+            <button class='menu-btn'>Contacts</button>
+            <a href='payment.html'><button class='menu-btn'>Payment</button></a>
+            </div>
+        </div>
+        <div class='headline'>
+            <!--a href='postgig.php'><button class='header'>Advertisement</button></a-->
+            <a href='signup.html'><span class='header'>Register</span></a>
+            <a href='login.html'><span class='header'>Login</span></a>
+        </div>
+        <div style='color:yellow;margin-bottom:-1.5em;margin-top:4em'><marquee>The best Restaurant you will ever love</marquee></div>
+        <div class='searchbar'>
+                <div class = "topnav">
+                <form action = '' method = 'GET' name = 'querySearch'>
+                  <input type = "text" size=100% step=10 name = 'search' placeholder = "Search by Location,Type,Size...and Enter" required/>
+                </form>
+                </div>
+        </div>
+        <div class='headline1'>
+            <!--a href='postgig.php'><button class='header'>Advertisement</button></a-->
+            <a href='postgig.php'><span class='header'>Need a delivery?</span></a>
+            <a href='postgig.php'><span class='header'>Catery</span></a>
+            <a href='services.php'><span class='header'>Shelves</span></a>
+            <a href='updateprofile.php'><span class='header'>Profile</span></a>
+        </div>
+        </div>
+        <section>
+        <div class='food'>
+            <label>Need a Food?</label>
+        </div>
+        <table>
+        <tr> 
+        <td><span><a href=''>
+            <div class='image-down'>
+                    <img src='IMAGES/eba.jpeg' class='img-control' title='Eba'/></a><div class='price'>Price: 500/plate of Eba</div>
+                    <div class='image-form'>
+                    <a href='cart.php'><button class='image-btn'>Like</button></a>
+                   
+                    <a href='chats.php'><button class='image-btn'>Cart</button></a>
+                    <button class='image-btn'>Contact</button>
+                    <div class='popup-contact'><button class='image-btn' onclick='popupForm1()' name ='contact-btn'>Order</button>
+        
+                        <span class='popupbox-contact' id='popup1'>
+                        <div class='container'>    
+                        <form action='' method='POST' name='saveCardDetails' class='order-form'>
+                                <div class='order-content'><label for='card_name'>Name on card</label></div>
+                                <div class='order-content'><input id='card_name' name='bankUserName' type='text' required></div>
+                                <div class='order-content'><label for='card_number'>Card Number</label></div>
+                                <div class='order-content'><input id='card_number' name='bankCardNo' type='number' required></div>
+                                <div class='order-content'><label for='bank_namer'>Bank Name</label></div>
+                                <div class='order-content'><input id='bank_name' name='bankName' type='text' required></div>
+                                <div class='order-content'><label for='bank_namer'>Order Pieces</label></div>
+                                <div class='order-content'><input id='pieces1' name='orderPieces' type='number' required></div>
+                                <div class='order-content'><label for='bank_namer'>Delivery Location</label></div>
+                                <div class='order-content'><input id='bank_name' name='location' type='text' required></div>
+                                <button class='order-btn' onclick='place1()'>Place Order</button>
+                            </form>
+                            </div>
+                            </span>
+                            </div>
+                            <script>
+                                    function popupForm1() {
+                                        var popup = document.getElementById('popup1');
+                                            popup.classList.toggle('show');
+                                                }
+                                    function place1(){
+                                        var piece = document.getElementById('pieces1').value;
+                                        var totalPrice = piece * 500;
+                                        alert("Order Succesfully placed for "+piece+"for "+totalPrice);
+                                    }
+                                </script>
+                    </div>
+                </div></span></td>
+        <td><span><a href=''>
+            <div class='image-down'>
+                <img src='IMAGES/rest1.jpeg' class='img-control' title='Amala'/></a><div class='price'>Price: 100/plate of Amala</div>
+                <div class='image-form'>
+                        <a href='cart.php'><button class='image-btn'>Like</button></a>
+                        
+                        <a href='chats.php'><button class='image-btn'>Cart</button></a>
+                        <button class='image-btn'>Contact</button>
+                        <div class='popup-contact'><button class='image-btn' onclick='popupForm2()' name ='contact-btn'>Order</button>
+        
+                            <span class='popupbox-contact' id='popup2'>
+                            <div class='container'>    
+                            <form action='' method='POST' name='saveCardDetails' class='order-form'>
+                                    <div class='order-content'><label for='card_name'>Name on card</label></div>
+                                    <div class='order-content'><input id='card_name' name='bankUserName' type='text' required></div>
+                                    <div class='order-content'><label for='card_number'>Card Number</label></div>
+                                    <div class='order-content'><input id='card_number' name='bankCardNo' type='number' required></div>
+                                    <div class='order-content'><label for='bank_namer'>Bank Name</label></div>
+                                    <div class='order-content'><input id='bank_name' name='bankName' type='text' required></div>
+                                    <div class='order-content'><label for='bank_namer'>Order Pieces</label></div>
+                                    <div class='order-content'><input id='pieces2' name='orderPieces' type='number' required></div>
+                                    <div class='order-content'><label for='bank_namer'>Delivery Location</label></div>
+                                    <div class='order-content'><input id='bank_name' name='location' type='text' required></div>
+                                    <button class='order-btn' onclick='place2()'>Place Order</button>
+                                </form>
+                                </div>
+                                </span>
+                                </div>
+                                <script>
+                                        function popupForm2() {
+                                            var popup = document.getElementById('popup2');
+                                                popup.classList.toggle('show');
+                                                    }
+                                        function place2(){
+                                            var piece = document.getElementById('pieces2').value;
+                                            var totalPrice = piece * 100;
+                                            alert("Order Succesfully placed for "+piece+"for "+totalPrice);
+                                    }
+                                    </script>
+                        </div>
+                    </div></span></td>
+        <td><span><a href=''>
+                <div class='image-down'>
+                    <img src='IMAGES/rest2.jpeg' title='sausage' class='img-control'/></a><div class='price'>Price: 1500/plate of Sausage</div>
+                    <div class='image-form'>
+                            <a href='cart.php'><button class='image-btn'>Like</button></a>
+                          
+                            <a href='chats.php'><button class='image-btn'>Cart</button></a>
+                            <button class='image-btn'>Contact</button>
+                            <div class='popup-contact'><button class='image-btn' onclick='popupForm3()' name ='contact-btn'>Order</button>
+        
+                                <span class='popupbox-contact' id='popup3'>
+                                <div class='container'>    
+                                <form action='' method='POST' name='saveCardDetails' class='order-form'>
+                                        <div class='order-content'><label for='card_name'>Name on card</label></div>
+                                        <div class='order-content'><input id='card_name' name='bankUserName' type='text' required></div>
+                                        <div class='order-content'><label for='card_number'>Card Number</label></div>
+                                        <div class='order-content'><input id='card_number' name='bankCardNo' type='number' required></div>
+                                        <div class='order-content'><label for='bank_namer'>Bank Name</label></div>
+                                        <div class='order-content'><input id='bank_name' name='bankName' type='text' required></div>
+                                        <div class='order-content'><label for='bank_namer'>Order Pieces</label></div>
+                                        <div class='order-content'><input id='pieces3' name='orderPieces' type='number' required></div>
+                                        <div class='order-content'><label for='bank_namer'>Delivery Location</label></div>
+                                        <div class='order-content'><input id='bank_name' name='location' type='text' required></div>
+                                        <button class='order-btn' onclick='place3()'>Place Order</button>
+                                    </form>
+                                    </div>
+                                    </span>
+                                    </div>
+                                    <script>
+                                            function popupForm3() {
+                                                var popup = document.getElementById('popup3');
+                                                    popup.classList.toggle('show');
+                                                        }
+                                            function place3(){
+                                                var piece = document.getElementById('pieces3').value;
+                                                var totalPrice = piece * 1500;
+                                                alert("Order Succesfully placed for "+piece+"for "+totalPrice);
+                                            }
+                                        </script>
+                            </div>
+                        </div></span></td>
+        </tr>
+        <tr>
+        <td><span><a href=''>
+                <div class='image-down'>
+                    <img src='IMAGES/rest3.jpeg'title='Fruits' class='img-control'/></a><div class='price'>Price: 400/plate of Fruits</div>
+                    <div class='image-form'>
+                            <a href='cart.php'><button class='image-btn'>Like</button></a>
+                            
+                            <a href='chats.php'><button class='image-btn'>Cart</button></a>
+                            <button class='image-btn'>Contact</button>
+                            <div class='popup-contact'><button class='image-btn' onclick='popupForm4()' name ='contact-btn'>Order</button>
+        
+                                <span class='popupbox-contact' id='popup4'>
+                                <div class='container'>    
+                                <form action='' method='POST' name='saveCardDetails' class='order-form'>
+                                        <div class='order-content'><label for='card_name'>Name on card</label></div>
+                                        <div class='order-content'><input id='card_name' name='bankUserName' type='text' required></div>
+                                        <div class='order-content'><label for='card_number'>Card Number</label></div>
+                                        <div class='order-content'><input id='card_number' name='bankCardNo' type='number' required></div>
+                                        <div class='order-content'><label for='bank_namer'>Bank Name</label></div>
+                                        <div class='order-content'><input id='bank_name' name='bankName' type='text' required></div>
+                                        <div class='order-content'><label for='bank_namer'>Order Pieces</label></div>
+                                        <div class='order-content'><input id='pieces4' name='orderPieces' type='number' required></div>
+                                        <div class='order-content'><label for='bank_namer'>Delivery Location</label></div>
+                                        <div class='order-content'><input id='bank_name' name='location' type='text' required></div>
+                                        <button class='order-btn' onclick='place4()'>Place Order</button>
+                                    </form>
+                                    </div>
+                                    </span>
+                                    </div>
+                                    <script>
+                                            function popupForm4() {
+                                                var popup = document.getElementById('popup4');
+                                                    popup.classList.toggle('show');
+                                                        }
+                                            function place4(){
+                                                var piece = document.getElementById('pieces4').value;
+                                                var totalPrice = piece * 400;
+                                                alert("Order Succesfully placed for "+piece+"for "+totalPrice);
+                                            }
+                                        </script>
+                            </div>
+                        </div></span></td>
+        <td><span><a href=''>
+                <div class='image-down'>
+                    <img src='IMAGES/eforiro.jpeg' class='img-control' title='Amala'/></a><div class='price'>Price: 800/plate of Amala</div>
+                    <div class='image-form'>
+                            <a href='cart.php'><button class='image-btn'>Like</button></a>
+                            
+                            <a href='chats.php'><button class='image-btn'>Cart</button></a>
+                            <button class='image-btn'>Contact</button>
+                            <div class='popup-contact'><button class='image-btn' onclick='popupForm5()' name ='contact-btn'>Order</button>
+        
+                                <span class='popupbox-contact' id='popup5'>
+                                <div class='container'>    
+                                <form action='' method='POST' name='saveCardDetails' class='order-form'>
+                                        <div class='order-content'><label for='card_name'>Name on card</label></div>
+                                        <div class='order-content'><input id='card_name' name='bankUserName' type='text' required></div>
+                                        <div class='order-content'><label for='card_number'>Card Number</label></div>
+                                        <div class='order-content'><input id='card_number' name='bankCardNo' type='number' required></div>
+                                        <div class='order-content'><label for='bank_namer'>Bank Name</label></div>
+                                        <div class='order-content'><input id='bank_name' name='bankName' type='text' required></div>
+                                        <div class='order-content'><label for='bank_namer'>Order Pieces</label></div>
+                                        <div class='order-content'><input id='pieces5' name='orderPieces' type='number' required></div>
+                                        <div class='order-content'><label for='bank_namer'>Delivery Location</label></div>
+                                        <div class='order-content'><input id='bank_name' name='location' type='text' required></div>
+                                        <button class='order-btn' onclick='place5()'>Place Order</button>
+                                    </form>
+                                    </div>
+                                    </span>
+                                    </div>
+                                    <script>
+                                        function popupForm5() {
+                                            var popup = document.getElementById('popup5');
+                                                popup.classList.toggle('show');
+                                                    }
+                                        function place5(){
+                                            var piece = document.getElementById('pieces5').value;
+                                            var totalPrice = piece * 800;
+                                            alert("Order Succesfully placed for "+piece+"for "+totalPrice);
+                                        }
+                                    </script>
+                            </div>
+                        </div></span></td>
+        <td><span><a href=''>
+                <div class='image-down'>
+                    <img src='IMAGES/egunsi.jpeg' title='sausage' class='img-control'/></a><div class='price'>Price: 1200/plate of Egunsi</div>
+                    <div class='image-form'>
+                            <a href='cart.php'><button class='image-btn'>Like</button></a>
+                            
+                            <a href='chats.php'><button class='image-btn'>Cart</button></a>
+                            <button class='image-btn'>Contact</button>
+                            <div class='popup-contact'><button class='image-btn' onclick='popupForm6()' name ='contact-btn'>Order</button>
+        
+                                <span class='popupbox-contact' id='popup6'>
+                                <div class='container'>    
+                                <form action='' method='POST' name='saveCardDetails' class='order-form'>
+                                        <div class='order-content'><label for='card_name'>Name on card</label></div>
+                                        <div class='order-content'><input id='card_name' name='bankUserName' type='text' required></div>
+                                        <div class='order-content'><label for='card_number'>Card Number</label></div>
+                                        <div class='order-content'><input id='card_number' name='bankCardNo' type='number' required></div>
+                                        <div class='order-content'><label for='bank_namer'>Bank Name</label></div>
+                                        <div class='order-content'><input id='bank_name' name='bankName' type='text' required></div>
+                                        <div class='order-content'><label for='bank_namer'>Order Pieces</label></div>
+                                        <div class='order-content'><input id='pieces6' name='orderPieces' type='number' required></div>
+                                        <div class='order-content'><label for='bank_namer'>Delivery Location</label></div>
+                                        <div class='order-content'><input id='bank_name' name='location' type='text' required></div>
+                                        <button class='order-btn' onclick='place6()'>Place Order</button>
+                                    </form>
+                                    </div>
+                                    </span>
+                                    </div>
+                                    <script>
+                                    function popupForm6() {
+                                        var popup = document.getElementById('popup6');
+                                        popup.classList.toggle('show');
+                                            }
+                                    function place6(){
+                                        var piece = document.getElementById('pieces6').value;
+                                        var totalPrice = piece * 1200;
+                                        alert("Order Succesfully placed for "+piece+"for "+totalPrice);
+                                    }
+                                    </script>
+                            </div>
+                        </div></span></td>
+        </tr>
+        </tr>
+        </table>
+        </section>
+        
+        <section class='footercase'>
+            <div style='margin-left:1em;margin-top:0.5em;'>
+                Developed by Product Lead @ CodeLagos Restaurant
+            </div>
+            <div style='margin-left:1em;margin-top:2em;'>
+                Contact us @codeLagosRest.com
+            </div>
+            <div style='margin-left:1em;margin-top:-0.5em'>
+                Follow Us @ 
+                <a href='twitter.com'><img src='IMAGES/google.png' class='footer-img'/></a>
+                <a href='facebook.com'><img src='IMAGES/facebook.png' class='footer-img'/></a>
+                <a href='twitter.com'><img src='IMAGES/twitter.png' class='footer-img'/></a>
+                <a href='instagram.com'><img src='IMAGES/instagram.png' class='footer-img'/></a>
+            </div>
+        </section>
+    </body>
+</HTML>

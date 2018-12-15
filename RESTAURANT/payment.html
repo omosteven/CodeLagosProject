@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewpoint' content='width=width-width, initial-scale=1.0'>
+    <title>
+        Restaurant
+    </title>
+     <link rel="stylesheet" href="CSS/index.css">
+     <link type='text/css' rel='stylesheet' href='CSS/savecarddetails.css'>
+<link type='text/css' rel='stylesheet' href='CSS/materialize.min.css'>
+    </head>
+    <body>
+
+    
+        <div class='headcase' >
+            <h1 class='head'>CodeLagos Restaurant</h1>
+            <div class='menu-down' style='margin-top:-1em;'>
+                <button class='menu-btn'>Menu<i ></i></button>
+                <div class='menu-form'>
+                <a href='cart.php'><button class='menu-btn'>My Cart</button></a>
+                <button class='menu-btn'>My Order</button>
+                <a href='chats.php'><button class='menu-btn'>Chats</button></a>
+                <button class='menu-btn'>Contacts</button>
+                <a href='payment.html'><button class='menu-btn'>Payment</button></a>
+                </div>
+            </div>
+            <div class='headline' >
+                <!--a href='postgig.php'><button class='header'>Advertisement</button></a-->
+                <a href='signup.html'><span class='header'>Register</span></a>
+                <a href='login.html'><span class='header'>Login</span></a>
+            </div>
+            </div>
+    <div class='container'>    
+    <form action='' method='POST' name='saveCardDetails'>
+        <div class='input-field completeWidth'>
+            <input id='card_name' name='bankUserName' type='text' class='validate' required>
+            <label for='card_name'>Name on card</label>
+        </div>
+        <div class='input-field completeWidth'>
+            <input id='card_number' name='bankCardNo' type='number' class='validate' required>
+            <label for='card_number'>Card Number</label>
+        </div>
+        <div class='input-field completeWidth'>
+            <input id='card_number' name='bankName' type='text' class='validate' required>
+            <label for='card_number'>Bank Name</label>
+        </div>
+        <div class='input-field halfWidth'>
+            <input id='expiry_date' name='validityDate' type='text' value='' class='datepicker' required>
+            <label for='expiry_date'>Expiry Date</label>
+        </div>
+        <div class='input-field halfWidth' style='float:right'>
+            <input id='csv' type='number' name='cvv' class='validate' required>
+            <label for='csv'>CVV?</label>
+        </div>
+        <div class='input-field halfWidth' id='hidediv'>
+            <input id='otp' name='otp' type='password' required>
+            <label for='otp'>OTP?</label>
+        </div>
+        <!--div class='button'>
+            <a class='ac' onclick='openOTP()' href='#'> Authenthicate </a>
+            <a class='ac' name='saveCardDetails' href='#'> Save </a>
+        </div-->
+        <div class='button'>
+            <button class='ac' onclick='openOTP()' id='auth' href='#'> Authenthicate </button>
+        </div>
+        <div class='button'>
+            <button class='ac' id='btn' name='saveCardDetails' href='#'> Save Card</button>
+        </div>
+        
+    </form>
+    </div>
+    <script>
+    //to hide otp until autenticate is done
+    {
+        var otp = document.getElementById('hidediv');
+        otp.style.display = 'none';
+        var btn = document.getElementById('btn');
+        btn.style.display = 'none';
+        var auth = document.getElementById('auth');
+        function openOTP(){
+            otp.style.display = 'block';
+            btn.style.display = 'block';
+            auth.style.display='none';
+        }
+    }
+    </script>
+    <!--js script for form live-->
+    <script type='text/javascript' src='js/jquery-3.2.1.min.js'></script>
+    <script type='text/javascript' src='js/materialize.min.js'></script>
+    <script>
+    //this script is the initialization of the datepicker section
+    $('.datepicker').pickadate({
+        selectMonths: true, // Creates a dropdown to control month
+        selectYears: 15, // Creates a dropdown of 15 years to control year,
+        selectDays :false,
+        today: 'Today',
+        clear: 'Clear',
+        close: 'Ok',
+        closeOnSelect: false // Close upon selecting a date,
+    });
+    </script>
+
+<section class='footercase'>
+    <div style='margin-left:1em;margin-top:0.5em;'>
+        Developed by Product Lead @ CodeLagos Restaurant
+    </div>
+    <div style='margin-left:1em;margin-top:2em;'>
+        Contact us @codeLagosRest.com
+    </div>
+    <div style='margin-left:1em;margin-top:-0.5em'>
+        Follow Us @ 
+        <a href='twitter.com'><img src='IMAGES/google.png' class='footer-img'/></a>
+        <a href='facebook.com'><img src='IMAGES/facebook.png' class='footer-img'/></a>
+        <a href='twitter.com'><img src='IMAGES/twitter.png' class='footer-img'/></a>
+        <a href='instagram.com'><img src='IMAGES/instagram.png' class='footer-img'/></a>
+    </div>
+</section>

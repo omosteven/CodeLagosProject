@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/signup.css">
+    <title>LodgeConnect -Signup</title>
+    <script>
+    
+    
+    function validatePass()
+          {
+    var pass1 = document.getElementById('inputPassword1');
+    var message1 = document.getElementById('error-nwl');
+    
+    var goodColor = "white";
+    var badColor = "darkred";
+
+    
+    if(pass1.value.length > 7){
+        pass1.style.backgroundColor = goodColor;
+        message1.style.color = goodColor;
+        message1.innerHTML = "Password length Ok!";
+    }
+    else{
+        pass1.style.backgroundColor = badColor;
+        message1.style.color = badColor;
+        message1.innerHTML = "Must be at least 8 characters!";
+    }
+}
+function matchPass(){
+  var pass1 = document.getElementById('inputPassword1');
+    var pass2 = document.getElementById('inputPassword2');
+    var message1 = document.getElementById('error-nwl');
+
+    var goodColor = "white";
+    var badColor = "darkred";
+
+    if(pass1.value == pass2.value){
+        pass2.style.backgroundColor = goodColor;
+        message1.style.color = goodColor;
+        message1.innerHTML = "";
+      }
+    else{
+        pass2.style.backgroundColor = badColor;
+        message1.style.color = badColor;
+        message1.innerHTML = "These passwords don't match";
+    }
+  } 
+    </script>
+  </head>
+  <body class="text-center">
+    <div class="content">
+      <form class="form-signin card" action="index.html" method="POST">
+        <div class="card-body">
+            <img class="mb-4" src="IMAGES/rest2.jpeg" border-radius='2em' alt="" width="100" height="82">
+            <h1 class="h3 mb-3 font-weight-normal">Please sign up</h1>
+            <span id="reauth-email" class="reauth-email"></span>
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus name="Email">
+            <label for="inputPassword1" class="sr-only">Password</label>
+            <input type="password" id="inputPassword1" onkeyup="validatePass(); return false;" class="form-control" placeholder="Password" required name="Password">
+            <label for="inputPassword2" class="sr-only">Confirm Password</label>
+            <input type="password" id="inputPassword2"  onkeyup="matchPass(); return false;" title ='Please re-enter your password here' class="form-control" placeholder="Confirm Password" required name="Confirm_Password">
+            
+          </div>
+          <div id="error-nwl"></div>
+      <button class="btn btn-lg btn-primary btn-block btn-signin" name="signup" type="submit">Sign up</button>
+      </form>
+      
+      <p class="mt-5 mb-3 text-white">&copy; CodeLagosRest, 2018.</p>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Bootstrap JS -->
+    <script src="js/vendor/jquery-slim.min.js"></script>
+    <script src="js/vendor//bootstrap.bundle.min.js"></script>
+  </body>
+</html>
